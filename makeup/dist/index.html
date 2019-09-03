@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>ЧебуRoom</title>
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="css/vendor/owl.carousel.css">
+	<link rel="stylesheet" href="css/vendor/owl.theme.default.css">
+	<link rel="stylesheet" href="css/vendor/daterangepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<style>
+		#loader-site{
+			background-color:#000;
+			position:fixed;
+			top:0;left:0;
+			height:100%;width:100%;
+			z-index:99999999
+		}
+		#loader-site img{
+			position:absolute;
+			top:50%;left:50%;
+			width:200px;height:200px;
+			margin:-100px 0 0 -100px
+		}
+		#loader-site img.circle-logo-an-out{
+			animation:10s linear 0s normal none infinite running circlelogorot;
+			-webkit-animation:10s linear 0s normal none infinite running circlelogorot;
+			-webkit-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+		}
+		@keyframes circlelogorot{
+			0%{
+				transform:rotate(0)
+			}
+			100%{
+				transform:rotate(360deg)
+			}
+		}
+		@-webkit-keyframes circlelogorot{
+			0%{
+				transform:rotate(0)
+			}
+			100%{
+				transform:rotate(360deg)
+			}
+		}
+		#loader-site.hide{
+			opacity: 0;
+			top:-100%;
+		}
+	</style>
+	<div id="loader-site">
+		<img src="img/circle-logo-an-out.svg" class="circle-logo-an-out">
+		<img src="img/circle-logo-an-in.svg" class="circle-logo-an-in">
+	</div>
+
+	<header class="header header_index">
+		<div class="container">
+			<div class="main-row">
+				<a href="#" class="logo-link">
+					<img src="img/logo.svg" alt="">
+				</a>
+				<div href="#" class="menu-button">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="menu-row">
+		<div class="container d-flex">
+			<div class="close-menu d-block d-md-none">
+				<span></span>
+			</div>
+			<div class="logo-container">
+				<a href="#" class="logo">
+					<img src="img/logo_min.svg" alt="">
+				</a>
+			</div>
+			<nav>
+				<ul class="main-menu d-flex">
+					<li class="item item_cheburoom active">
+						<a href="#">
+							Чебуroom <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.067 8.624"><defs><style>.a{fill:none;stroke:#000;}</style></defs><path class="a" d="M1888.617,50l4.044,4,3.87-4" transform="translate(-49.645 1896.89) rotate(-90)"/></svg>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="cafe.html">
+									CAFÉ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									FAMILY CAFÉ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									FOOD COURTS
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<a href="#">
+							Акции & Новости
+						</a>
+					</li>
+					<li class="item">
+						<a href="loyalty.html">
+							Программа лояльности
+						</a>
+					</li>
+					<li class="item">
+						<a href="job.html">
+							Работа
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="lang-switch">
+				<a href="#" class="ru active">Рус</a> |
+				<a href="#" class="en">Eng</a>
+			</div>
+		</div>
+	</div>
+	<div class="overlay"></div>
+
+	<section class="main-screen">
+		<div class="container">
+			<div class="welcome-text">
+				Готовим то, что любим сами
+			</div>
+			<div class="circle-logo">
+				<img src="img/circle-logo.svg" alt="">
+			</div>
+		</div>
+		<div class="video-bg">
+			<video id="video_bg" autoplay muted playsinline>
+				<source src="video/4.mp4"></source>
+				<source src="video/4.webm"></source>
+			</video>
+		</div>
+		<div class="mask"></div>
+	</section>
+
+	<section class="menu-block d-block d-md-flex">
+		<div class="left-column">
+			<div class="item_family-container">
+				<a href="#" class="item item_family d-flex">
+					<h2 class="family-title">
+						Family
+						<span>
+							Семейный ресторан
+						</span>
+					</h2>
+				</a>
+			</div>
+			<div class="item_food-courts-container">
+				<a href="#" class="item item_food-courts d-flex">
+					<h2 class="food-courts-title">
+						Food courts
+					</h2>
+				</a>
+			</div>
+		</div>
+		<div class="right-column">
+			<div class="item_cafe-container">
+				<a href="#" class="item item_cafe d-flex">
+					<h2 class="cafe-title">
+						CAFÉ
+					</h2>
+				</a>
+			</div>
+			<div href="#" class="item item_delivery d-flex">
+				<a href="#" class="delivery-link">
+					<img src="img/delivery.svg" alt="">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="slider">
+		<div class="slider-list owl-carousel">
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_1.jpg" alt="">
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_2.jpg" alt="">
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_3.jpg" alt="">
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_1.jpg" alt="">
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_2.jpg" alt="">
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<img src="img/slider_3.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="first-row d-block d-sm-flex">
+					<div class="min-logo-container">
+						<img src="img/logo_small.svg" alt="">
+					</div>
+					<ul class="menu-list d-block d-md-flex">
+						<li class="item">
+							<div data-toggle="modal" data-target="#reserve-modal">
+								Резерв
+							</div>
+						</li>
+						<li class="item">
+							<a href="#">
+								Доставка
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								Акции & Новости
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="row">
+				<div class="site-map d-block d-sm-flex col-12 col-md-10">
+					<ul class="left-col">
+						<li class="item">
+							<a href="philosophy.html">
+								Философия
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								Партнеры
+							</a>
+						</li>
+						<li class="item">
+							<a href="job.html">
+								Работа
+							</a>
+						</li>
+						<li class="item">
+							<a href="loyalty.html">
+								Программа лояльности
+							</a>
+						</li>
+						<li class="item">
+							<a href="contacts.html">
+								Контакты
+							</a>
+						</li>
+					</ul>
+					<ul class="mid-col">
+						<li class="item">
+							<a href="cafe.html">
+								CAFÉ
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								FAMILY семейный ресторан
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								FOOD COURTS
+							</a>
+						</li>
+					</ul>
+					<ul class="right-col">
+						<li class="item">
+							<a href="#">
+								ЧЕБУROOM на карте
+							</a>
+						</li>
+						<li class="item">
+							<div data-toggle="modal" data-target="#review-modal">
+								Контроль качества
+							</div>
+							<span>
+								Если у Вас есть вопросы, комментарии и замечания по обслуживанию, еде или сервису, будем рады их обсудить
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="social-row">
+				<ul class="social-list d-flex">
+					<li class="instagram item">
+						<a href="#">Instagram</a>
+					</li>
+					<li class="vk item">
+						<a href="#">Vk</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Модальное окно резерва -->
+	<div id="reserve-modal" class="reserve-modal modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="closebutton">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-callibri_parse_form="true">
+						<span></span>
+					</button>
+				</div>
+				<div class="modal-header">
+					<img src="img/reserved.svg" alt="">
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col col-lg-7 col-12 form-container">
+								<div class="title">
+									Забронировать стол можно в семейном ресторане ЧЕБУROOM FAMILY по адресу: бульвар Менделеева, 5.
+								</div>
+								<form id="reserve-form" class="reserve-form d-flex" action="">
+									<label class="label-date">
+										Дата брони
+										<input type="text" id="form-date-picker" class="date" autocomplete="off">
+									</label>
+									<label class="label-quantity">
+										Кол-во человек
+										<span class="quantity-minus">-</span>
+										<input class="quantity-num" type="number" min="1" step="1" value="1">
+										<span class="quantity-plus">+</span>
+									</label>
+									<label class="label-time">
+										Время
+										<!-- <input type="time" value="20:00"> -->
+										<select name="time" id="time" class="time">
+											<option value="">20:00</option>
+											<option value="">20:30</option>
+											<option value="">21:00</option>
+										</select>
+									</label>
+									<label class="label-pref">
+										Пожелания к брони
+										<textarea name="preferences" id="preferences" rows="1" placeholder="Ваши пожелания" class="pref"></textarea>
+									</label>
+									<button type="submit" class="reserve-button">Забронировать</button>
+								</form>
+							</div>
+							<div class="col col-lg-5 col-12 note">
+								<div class="item first_item">
+									Если Вы задерживаетесь более, чем на 20 минут, пожалуйста, предупредите нас. Для этого надо всего лишь позвонить по этому телефону <a href="tel:+79812490017">+7-981-249-00-17</a>. Иначе нам придется снять бронь.
+								</div><br>
+								<div class="item second_item">
+									Большая компания? Если Вы планируете прийти компанией больше 8 человек, пожалуйста, также позвоните по номеру телефона, указанному выше, чтобы мы могли подобрать самое удобное место.
+								</div>
+							</div>
+						</div>
+						<div class="add-info">
+							Дополнительную информацию можно узнать по телефону: <br>
+							<a href="tel:+7-981-249-00-17">+7-981-249-00-17</a>
+						</div>
+						<div class="reserve-info">
+							<div class="content">
+								В направлениях CAFÉ, FOOD COURT и STREET MARKET бронь отсутствует, так как столы занимаются в порядке живой очереди. При желании стол можно забронировать по номеру в ресторан.
+							</div>
+							<ul class="adresses-list d-flex">
+								<li class="item">
+									м.Маяковская <br>
+									Литейный пр., 63
+									<a href="tel:8 (981) 942-96-83">8 (981) 942-96-83</a>
+								</li>
+								<li class="item">
+									м.Сенная <br>
+									ул.Ефимова, 1/4
+									<a href="tel:8 (981) 942-96-74">8 (981) 942-96-74</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Модальное окно отзыва -->
+	<div id="review-modal" class="review-modal modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="closebutton">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-callibri_parse_form="true">
+						<span></span>
+					</button>
+				</div>
+				<div class="modal-header">
+					<!-- <img src="img/reserved.svg" alt=""> -->
+					<div class="title">
+						ОСТАВИТЬ ОТЗЫВ
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-8 col-xl-6 title">
+								Мы будем очень рады, если ты поделишься с нами своим впечатлением от посещения наших заведений.  
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 form-container">
+								<form id="reserve-form" class="reserve-form d-flex" action="">
+									<div class="left-side">
+										<label class="label-name">
+											Имя
+											<input type="text" name="name" placeholder="Обязательное поле">
+										</label>
+										<label class="label-email">
+											E-mail
+											<input type="email" name="email" placeholder="Обязательно">
+										</label>
+										<label class="label-tel">
+											Телефон
+											<input type="tel" name="telephone" placeholder="Необязательное поле">
+										</label>
+										<label class="label-restaurant">
+											Ресторан
+											<select name="restaurant" id="restaurant">
+												<option value="" disabled selected hidden>Выбрать</option>
+												<option value="">Ресторан 1</option>
+												<option value="">Ресторан 2</option>
+												<option value="">Ресторан 3</option>
+											</select>
+										</label>
+									</div>
+									<div class="right-side">
+										<label class="label-review">
+										Сообщение
+											<textarea name="review" id="review" rows="1" placeholder="Обязательное поле" class="review"></textarea>
+										</label>
+										<div class="file-block">
+											<div class="file-choose">
+												<img src="img/paperclip.svg" class="file_label" alt="">
+												<label>
+													<input type="file" name="file">
+													<span>Прикрепить фото</span>
+												</label>
+											</div>
+											<input type="text" id="filename" class="filename" disabled>
+										</div>
+									</div>
+									<button type="submit" class="send-button">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/owl.carousel.min.js"></script>
+	<script src="js/vendor/moment.min.js"></script>
+	<script src="js/vendor/daterangepicker.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

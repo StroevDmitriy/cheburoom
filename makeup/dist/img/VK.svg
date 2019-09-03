@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-size: 30px;
+        font-family: Gilroy-ExtraBold, Gilroy;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="VK" class="cls-1" transform="translate(0 29)"><tspan x="0" y="0">VK</tspan></text>
+</svg>

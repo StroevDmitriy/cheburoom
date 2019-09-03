@@ -1,0 +1,2155 @@
+@font-face 
+	font-family: 'Gotham pro'
+	src: url('../fonts/GothamPro.ttf')
+@font-face 
+	font-family: 'Gotham pro'
+	src: url('../fonts/GothamPro-Medium.ttf')
+	font-weight: 500
+@font-face 
+	font-family: 'Gotham pro'
+	src: url('../fonts/GothamPro-Bold.ttf')
+	font-weight: 800
+@font-face 
+	font-family: 'Gilroy'
+	src: url('../fonts/Gilroy-ExtraBold.ttf')
+	font-weight: 800
+@font-face
+	font-family: 'XPLOR'
+	src: url('../fonts/XPLOR_Bold-Regular.otf')
+@font-face
+	font-family: 'Soak'
+	src: url('../fonts/SoakUpTheSunScript-Bold.otf')
+html,body,
+div,span,p,a,
+applet,
+object,
+iframe,
+h1,h2,h3,h4,h5,h6,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+caption,table,tr,th,td,thead,tbody,tfoot,
+article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,
+menu,nav,
+output,
+ruby,
+section,article,
+summary,
+time,
+mark,
+audio,video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+header,footer,section,article
+aside,
+details,
+figcaption,
+figure,
+hgroup,
+menu,nav
+	display: block
+body
+	line-height: 1
+	font-family: 'Gotham pro', sans-serif
+blockquote,
+q
+	quotes: none
+
+ol,ul
+	list-style: none
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+	content: ''
+	content: none
+table
+	border-collapse: collapse
+	border-spacing: 0
+a,
+a:visited
+	color: #000
+	text-decoration: none
+	-webkit-transition: all .2s ease-in-out
+	transition: all .2s ease-in-out
+a:hover,
+a:visited:hover
+	text-decoration: none
+a:focus
+	outline: 0
+input
+	outline: none
+*
+	-webkit-transition: all .2s ease-in-out
+	transition: all .2s ease-in-out
+.overflow-hidden
+	overflow: hidden
+	height: 100%
+
+/*Модальное окно резерва*/
+@media (min-width: 1200px)
+	.modal-lg
+		max-width: 1000px
+
+.reserve-modal
+	.modal-content
+		position: relative
+		border-radius: 0
+		@media (max-width:575px)
+			text-align: center
+		.closebutton
+			.close
+				position: absolute
+				top: 13px
+				right: 13px
+				height: 23px
+				width: 23px
+				span
+					display: block
+					height: 2px
+					width: 32px
+					background-color: #fff
+					transform: rotate(45deg)
+					margin-left: -5px
+				span:after
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					height: 2px
+					width: 32px
+					background-color: #fff
+					transform: rotate(90deg)
+		.modal-header
+			border-radius: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: #ff5f00
+			padding: 26px 0 24px
+			width: 100%
+			img
+				width: 96px
+		.modal-body
+			font-size: 15px
+			padding: 56px 0px 58px
+			line-height: 1.8
+			.row
+				position: relative
+			.col
+				padding: 24px 30px 0
+			.form-container
+				position: unset
+				margin-bottom: 1px
+				.title
+					margin-bottom: 56px
+				.reserve-form
+					justify-content: space-between
+					flex-wrap: wrap
+					@media (max-width:575px)
+						flex-direction: column
+					label
+						font-family: Gotham Pro
+						font-size: 17px
+						font-weight: 500
+						margin-bottom: 24px
+						input, select
+							height: 40px
+						input[type="number"]
+							text-align: center
+						@media (max-width:575px)
+							margin-left: auto
+							margin-right: auto
+					input, textarea, select
+						width: 100%
+						font-size: 15px
+						display: block
+						border: none
+						border-bottom: 1px solid #000
+					textarea
+						outline: none
+						margin-top: 24px
+						width: 100%
+					.label-pref
+						width: 100%
+						margin-bottom: 0
+					.pref
+						overflow: hidden
+						max-height: 400px
+						@media (max-width:575px)
+							text-align: center
+					.label-date
+						width: 50%
+					.date
+						position: relative
+						background-image: url(../img/small-calendar.svg)
+						background-repeat: no-repeat
+						background-position: right top
+						background-size: 32px
+						@media (max-width:575px)
+							width: max-content
+							margin: auto
+					.label-quantity
+						position: relative
+						width: 40%
+						span
+							position: absolute
+							cursor: pointer
+							font-family: Gotham Pro
+							font-weight: 500
+							line-height: 46px
+							user-select: none
+						.quantity-minus
+							left: 0px
+							bottom: 2px
+							font-size: 46px
+						.quantity-plus
+							right: 0px
+							bottom: 0
+							font-size: 34px
+						.quantity-num
+							color: transparent
+							text-shadow: 0 0 0 black
+						.quantity-num::-webkit-inner-spin-button
+							-webkit-appearance: none
+							-moz-appearance: none
+							appearence: none
+							display: none
+					.label-time
+						width: 50%
+						select
+							option
+								border: none
+								text-align: center
+					.time
+						outline: none
+						display: block
+						@media (max-width:575px)
+							width: max-content
+							margin: auto
+					.reserve-button
+						position: absolute
+						bottom: 0
+						right: 30px
+						cursor: pointer
+						z-index: 1
+						padding: 4px 28px 0
+						background-color: #ff5f00
+						color: #fff
+						font-family: Gilroy
+						text-transform: uppercase
+						border: 1px solid #ff5f00
+						@media (max-width:575px)
+							margin-right: -90px
+							right: 50%
+					.reserve-button:hover
+						color: #ff5f00
+						background-color: #fff
+			.note
+				position: relative
+				padding-bottom: 50px
+				a
+					font-family: Gotham Pro
+					font-weight: 800
+				a:hover
+					color: #ff5f00
+			.note:before
+				position: absolute
+				top: 0
+				left: 0
+				content: ''
+				background-color: rgba(112,112,112,.35)
+				height: 100%
+				width: 1px
+				.item:not(:last-child)
+					margin-bottom: 36px
+			.add-info
+				padding: 56px 15px 64px
+				a
+					font-family: Gotham Pro
+					font-weight: 800
+				a:hover
+					color: #ff5f00
+			.reserve-info
+				position: relative
+				font-size: 15px
+				padding: 0 15px
+				.content
+					border-top: 1px solid rgba(112,112,112,.35)
+					padding: 42px 0 36px
+				.adresses-list
+					@media (max-width:991px)
+						justify-content: space-between
+					@media (max-width:575px)
+						flex-direction: column
+					.item
+						margin-right: 70px
+						@media (max-width:991px)
+							margin-right: 0
+						a
+							font-family: Gotham Pro
+							font-weight: 800
+							display: block
+						a:hover
+							color: #ff5f00
+					.item:not(:last-child)
+						@media (max-width:575px)
+							margin-bottom: 40px
+
+header
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	width: 100%
+	.container	
+		position: relative
+		height: 100%
+		padding-top: 40px
+		.main-row
+			position: relative
+			top: 0
+			transition: all .4s ease-in-out
+			.logo-link
+				display: block
+				height: max-content
+				width: max-content
+				margin: auto
+				img
+					height: 44px
+			.menu-button
+				position: absolute
+				right: 0
+				height: 22px
+				width: 28px
+				top: 50%
+				margin-top: -15px
+				cursor: pointer
+				@media screen and (max-width: 767px)
+					margin-top: -12px
+				span
+					margin: auto 0
+					display: block
+					height: 3px
+					width: 100%
+					background-color: #fff
+				span:before
+					content: ''
+					position: absolute
+					top: 50%
+					margin-top: -1px
+					height: 3px
+					width: 100%
+					background-color: #fff
+				span:after
+					content: ''
+					position: absolute
+					bottom: 0
+					height: 3px
+					width: 100%
+					background-color: #fff
+		.main-row.disabled
+			top: -150px
+.header_index
+	.container
+		.main-row
+			.logo-link
+				@media screen and (max-width: 575px)
+					width: 180px
+				img
+					width: 100%
+.header_cafe
+	.container
+		@media screen and (max-width: 767px)
+			padding-top: 18px
+			padding-bottom: 18px
+		.main-row
+			.menu-button
+				span
+					background-color: #000
+				span:before
+					background-color: #000
+				span:after
+					background-color: #000
+.menu-row
+	position: fixed
+	top: -150px
+	width: 100%
+	display: block
+	font-family: Gotham pro
+	font-size: 14px
+	background-color: #fff
+	z-index: 9999
+	height: auto
+	padding: 16px 0
+	transition: all .4s ease-in-out
+	@media screen and (max-width: 991px)
+		padding: 20px 0
+		font-size: 12px
+	@media screen and (max-width: 767px)
+		width: 50%
+		height: 100%
+		min-height: 100%
+		top: 0
+		font-size: 16px
+		right: -50%
+	@media screen and (max-width: 575px)
+		width: 100%
+		right: -100%
+	.container
+		height: 100%
+	.close-menu
+		position: relative
+		top: 10px
+		height: 20px
+		width: 20px
+		margin-left: auto
+		span
+			position: absolute
+			left: 0
+			top: 50%
+			height: 2px
+			width: 100%
+			background-color: #000
+			transform: rotate(45deg)
+		span:after
+			position: absolute
+			content: ''
+			right: 0
+			top: 50%
+			height: 2px
+			width: 100%
+			background-color: #000
+			transform: rotate(90deg)
+			margin-top: -1px
+	.container
+		justify-content: space-between
+		padding-top: 0
+		@media screen and (max-width: 767px)
+			flex-direction: column
+			overflow-y: scroll
+		@media screen and (max-width: 575px)
+			text-align: center
+		.logo-container
+			height: 41px
+			width: 58px
+			align-items: center
+			@media screen and (max-width: 991px)
+				width: 36px
+			@media screen and (max-width: 767px)
+				margin-left: 30px
+			@media screen and (max-width: 575px)
+				margin: 0 auto
+			a
+				display: flex
+				height: 100%
+				width: 100%
+				img
+					height: 100%
+					width: 100%
+	nav
+		display: flex
+		@media screen and (max-width: 767px)
+			display: block
+		.main-menu
+			margin: auto
+			text-transform: uppercase
+
+			@media screen and (max-width: 767px)
+				flex-direction: column
+				margin-top: 20px
+			.arrow
+				position: relative
+				top: -2px
+				left: 8px
+				width: 5px
+				height: 8px
+				@media screen and (max-width: 767px)
+					display: none
+			.item
+				position: relative
+				transition: all .3s ease-in-out
+				@media screen and (max-width: 767px)
+					margin-left: 30px
+				@media screen and (max-width: 767px)
+					margin-right: 26px
+				a
+					padding-bottom: 10px
+				a:hover
+					@media screen and (min-width: 992px)
+						color: #000
+			.item:not(:last-child)
+				margin-right: 42px
+				@media screen and (max-width: 991px)
+					margin-right: 35px
+				@media screen and (max-width: 767px)
+					margin-right: 26px
+					margin-bottom: 30px
+				@media screen and (max-width: 767px)
+					margin-bottom: 40px
+			.item:after
+				position: absolute
+				bottom: -8px
+				left: 0
+				content: ''
+				height: 1px
+				background-color: #000
+				width: 0
+				transition: all .3s ease-in-out
+			.item:hover:after
+				@media screen and (min-width: 992px)
+					width: 100%
+			.item_cheburoom .submenu
+				position: absolute
+				top: 16px
+				left: -34px
+				background-color: #fff
+				height: 0
+				width: auto
+				padding: 0
+				overflow: hidden
+				transition: height .3s ease-in-out
+				@media screen and (max-width: 767px)
+					height: auto
+					position: relative
+					top: 15px
+					left: 20px
+				@media screen and (max-width: 575px)
+					left: 0
+					margin-top: 20px
+					margin-bottom: 20px
+				li
+					position: relative
+					width: max-content
+					padding-bottom: 10px
+					@media screen and (max-width: 575px)
+						margin: 0 auto
+				li:after
+					position: absolute
+					bottom: 0
+					left: 0
+					content: ''
+					width: 0%
+					height: 1px
+					background-color: #000
+					transition: all .3s ease-in-out
+				li:hover:after
+					@media screen and (min-width: 992px)
+						width: 100%
+				li:not(:last-child)
+					margin-bottom: 55px
+					@media screen and (max-width: 767px)
+						margin-bottom: 10px
+					@media screen and (max-width: 575px)
+						margin-bottom: 20px
+			.item_cheburoom:hover .submenu, .submenu:hover
+				@media screen and (min-width: 768px)
+					height: auto
+					padding: 65px 34px 34px
+			.item_cheburoom:hover .arrow
+				@media screen and (min-width: 992px)
+					transform: rotate(90deg)
+	.lang-switch
+		display: flex
+		height: max-content
+		margin-top: auto
+		margin-bottom: auto
+		@media screen and (max-width: 767px)
+			margin-left: 30px
+			margin-top: 80px
+		@media screen and (max-width: 575px)
+			margin-left: auto
+			margin-right: auto
+		a
+			position: relative
+			margin: 0 5px
+		a:not(:last-child)
+			@media screen and (max-width: 767px)
+				margin-left: 0px
+			@media screen and (max-width: 575px)
+				margin-left: 5px
+		a.active
+			color: #FF5F00
+			pointer-events: none
+		a:after
+			position: absolute
+			bottom: 0
+			left: 0
+			content: ''
+			height: 1px
+			width: 0%
+			background-color: #000
+		a:hover:after
+			@media screen and (min-width: 992px)
+				width: 100%
+.menu-row.active
+	top: 0
+
+	@media screen and (max-width: 767px)
+		right: 0
+.overlay
+	display: none
+	z-index: 9998
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .5)
+	-webkit-animation: fade 500ms
+	animation: fade
+.menu-row.active + .overlay
+	@media screen and (max-width: 767px)
+		display: block
+.main-screen
+	position: relative
+	width: 100%
+	overflow: hidden
+	.container
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		height: 100%
+		padding-top: 40px
+		z-index: 5
+		.welcome-text
+			position: relative
+			top: -20px
+			display: block
+			color: #fff
+			font-family: Gilroy
+			font-size: 44px
+			font-weight: 800
+			text-transform: uppercase
+			width: auto
+			max-width: 400px
+			text-align: center
+			line-height: 1.2
+			@media screen and (max-width: 767px)
+				font-size: 36px
+		.circle-logo
+			position: absolute
+			left: 15px
+			bottom: 47px
+			height: 200px
+			width: 200px
+			@media screen and (max-width: 767px)
+				height: 150px
+				width: 150px
+			img
+				width: 100%
+				height: 100%
+	.video-bg
+		height: 100%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		#video_bg
+			object-fit: cover
+			min-height: 100%
+			width: 100%
+	.mask
+		position: absolute
+		top: 0
+		left: 0
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.5)
+		z-index: 3
+.menu-block
+	.left-column,.right-column
+		width: 50%
+		@media screen and (max-width: 767px)
+			width: 100%
+	.item
+		width: 100%
+		color: #000
+		h2
+			margin: auto
+			text-transform: uppercase
+			font-family: Gilroy
+			font-weight: 800
+			font-size: 44px
+			@media screen and (max-width: 575px)
+				font-size: 28px
+	.item_family-container
+		overflow: hidden
+	.item_family
+		height: 435px
+		@media screen and (max-width: 767px)
+			height: 300px
+		.family-title
+			text-align: center
+			span
+				margin-top: 10px
+				display: block
+				font-family: Gotham pro
+				font-size: 20px
+				text-transform: lowercase
+				color: rgba(0,0,0,0)
+	.item_family:hover
+		@media screen and (min-width: 992px)
+			transform: scale(1.1)
+			span
+				color: rgba(0,0,0,1)
+	.item_food-courts-container
+		background-color: #FF5F00
+		overflow: hidden
+	.item_food-courts
+		height: 582px
+		@media screen and (max-width: 767px)
+			height: 300px
+		h2
+			color: #fff
+	.item_food-courts:hover
+		@media screen and (min-width: 992px)
+			transform: scale(1.1)
+	.item_cafe
+		height: 632px
+		background-image: url(../img/bg_cafe.jpg)
+		background-size: cover
+		@media screen and (max-width: 767px)
+			height: 300px
+		h2
+			margin-top: 180px
+			@media screen and (max-width: 767px)
+				margin-top: auto
+	.item_cafe:hover
+		@media screen and (min-width: 992px)
+			transform: scale(1.03)
+	.item_delivery
+		height: 385px
+		.delivery-link
+			display: block
+			margin: auto
+			img
+				height: 256px
+				width: 256px
+				@media screen and (max-width: 575px)
+					height: 180px
+					width: 180px
+		.delivery-link:hover
+			@media screen and (min-width: 992px)
+				img
+					transform: scale(1.05) rotate(10deg)
+	.item_cafe-container
+		overflow: hidden
+.slider
+	width: 100%
+	.slider-list
+		position: relative
+		width: 100%
+		left: -1px
+		.item
+			img
+				height: 100%
+		.owl-nav
+			.owl-prev, .owl-next
+				position: absolute
+				top: 50%
+				margin-top: -27px
+				height: 54px
+				width: 54px
+				@media screen and (max-width: 575px)
+					height: 36px
+					width: 36px
+					margin-top: -18px
+			.owl-prev
+				content: url(../img/arrow_left.svg)
+				left: 90px
+				@media screen and (max-width: 991px)
+					left: 40px
+				@media screen and (max-width: 575px)
+					left: 20px
+			.owl-next
+				content: url(../img/arrow_right.svg)
+				right: 90px
+				@media screen and (max-width: 991px)
+					right: 40px
+				@media screen and (max-width: 575px)
+					right: 20px
+.footer
+	background-color: #000
+	padding: 60px 0
+	.first-row
+		justify-content: space-between
+		margin-bottom: 55px
+		.min-logo-container
+			height: 74px
+			width: 74px
+			@media screen and (max-width: 575px)
+				margin: auto auto 40px
+		.menu-list
+			height: max-content
+			margin: auto 0
+			@media screen and (max-width: 575px)
+				text-align: center
+			.item
+				@media screen and (max-width: 767px)
+					margin-bottom: 20px		
+				a, div
+					position: relative
+					color: #FF5F00
+					font-family: Gotham pro
+					font-size: 16px
+					text-transform: uppercase
+					cursor: pointer
+				a:after, div:after
+					position: absolute
+					content: ''
+					left: 0
+					bottom: -10px
+					background-color: #FF5F00
+					height: 1px
+					width: 0%
+					transition: all .35s ease-in-out
+					background-color: #FF5F00
+				a:hover:after, div:hover:after
+					@media screen and (min-width: 992px)
+						width: 100%
+			.item:not(:last-child)
+				margin-right: 70px
+				@media screen and (max-width: 576px)
+					margin-left: auto
+					margin-right: auto
+	.site-map
+		justify-content: space-between
+		margin-bottom: 80px
+		.item
+			margin-bottom: 36px
+			width: max-content
+			max-width: 100%
+			@media screen and (max-width: 575px)
+				margin: 0 auto 36px
+			a, div
+				display: inline
+				position: relative
+				color: #fff
+				font-family: Gotham pro
+				font-size: 16px
+				cursor: pointer
+			a:after, div:after
+				position: absolute
+				content: ''
+				left: 0
+				bottom: -10px
+				background-color: #fff
+				height: 1px
+				width: 0%
+				transition: all .35s ease-in-out	
+				background-color: #FFF
+			a:hover:after, div:hover:after
+				@media screen and (min-width: 992px)
+					width: 100%
+			span
+				position: relative
+				top: 100%
+				left: 0
+				width: 110%
+				width: 100%
+				display: block
+				margin-top: 25px
+				color: #6E6969
+				font-size: 12px
+				line-height: 1.4
+		.left-col,.mid-col
+			@media screen and (max-width: 575px)
+				margin-bottom: 80px
+				text-align: center
+		.right-col
+			@media screen and (max-width: 575px)
+				text-align: center
+		.left-col, .mid-col, .right-col
+			max-width: 33%
+			@media screen and (max-width: 575px)
+				max-width: 66%
+				margin: 0 auto
+	.social-row
+		text-transform: uppercase
+		.social-list
+			@media screen and (max-width: 575px)
+				justify-content: space-around
+			.item
+				margin-right: 110px
+				@media screen and (max-width: 575px)
+					margin-right: 0
+				a
+					position: relative
+					color: #fff
+					font-family: Gilroy
+					font-size: 26px
+					font-weight: 800
+				a:after
+					position: absolute
+					content: ''
+					left: 0
+					bottom: -10px
+					background-color: #fff
+					height: 1px
+					width: 0%
+					transition: all .35s ease-in-out	
+				a:hover:after
+					@media screen and (min-width: 992px)
+						width: 100%
+				a:hover
+					@media screen and (min-width: 992px)
+
+/*Cafe page*/
+.cafe__main-screen
+	min-height: 100vh
+	padding-top: 75px
+	@media screen and (max-width: 991px)
+		padding-top: 81px
+	.info
+		width: 55%
+		@media screen and (max-width: 767px)
+			width: 100%
+		h2
+			font-family: Gilroy
+			font-size: 35px
+			font-weight: 800
+			margin-bottom: 30px
+			text-transform: uppercase
+			@media screen and (max-width: 991px)
+				font-size: 28px
+		.desc
+			color: #fff
+			background-color: #FF5F00
+			padding: 46px 144px 72px
+			font-size: 15px
+			line-height: 1.6
+			@media screen and (max-width: 1199px)
+				padding: 46px 100px 72px
+			@media screen and (max-width: 991px)
+				padding: 35px 70px 40px
+			@media screen and (max-width: 767px)
+				text-align: center
+			@media screen and (max-width: 575px)
+				padding: 35px 20px 40px
+		.menu
+			color: #000
+			padding: 70px 144px
+			font-size: 22px
+			@media screen and (max-width: 1199px)
+				padding: 70px 100px
+			@media screen and (max-width: 991px)
+				padding: 70px 80px
+				font-size: 18px
+			@media screen and (max-width: 767px)
+				width: auto
+				margin: auto
+				text-align: center
+			@media screen and (max-width: 575px)
+				padding: 50px 20px
+			h2
+				margin-bottom: 0px
+			.menu-list
+				text-transform: uppercase
+				flex-wrap: wrap
+				justify-content: flex-start
+				@media screen and (max-width: 767px)
+					width: max-content
+					margin: auto
+				.item
+					position: relative
+					padding-bottom: 10px
+					margin-right: 60px
+					margin-top: 40px
+					@media screen and (max-width: 991px)
+						margin-right: 30px
+					a:hover
+						@media screen and (min-width: 992px)
+							color: #000
+				.item:after
+					position: absolute
+					bottom: 0
+					left: 0
+					content: ''
+					width: 0
+					height: 1px
+					background-color: #000
+					transition: all .3s
+				.item:nth-child(2n-1):before
+					position: absolute
+					top: 0
+					right: -30px
+					content: ''
+					height: 25px
+					width: 3px
+					background-color: #000
+					@media screen and (max-width: 991px)
+						right: -15px
+						top: -2px
+				.item:hover:after
+					@media screen and (min-width: 992px)
+						width: 100%
+	.main-img
+		width: 45%
+		overflow: hidden
+		@media screen and (max-width: 767px)
+			width: 100%
+		img
+			min-height: 100%
+			width: auto
+			@media screen and (max-width: 767px)
+				width: 100%
+				display: flex
+.time-adress-section
+	@media screen and (max-width: 767px)
+		flex-direction: column
+	h3
+		margin-bottom: 20px
+		font-family: Gotham pro
+		font-weight: 500
+		font-size: 22px
+		line-height: 1
+		text-transform: uppercase
+		@media screen and (max-width: 991px)
+			font-size: 18px
+			margin-bottom: 6px
+	.adress-column
+		width: 55%
+		@media screen and (max-width: 767px)
+			width: 100%
+			order: 2
+			display: flex
+			flex-direction: column
+		.lunch-img-block
+			@media screen and (max-width: 767px)
+				order: 2
+			img
+				min-height: 100%
+				width: 100%
+				@media screen and (max-width: 767px)
+					float: left
+		.adress-block
+			padding: 75px 80px
+			font-size: 22px
+			line-height: 1.6
+			@media screen and (max-width: 991px)
+				padding: 40px 60px
+				font-size: 18px
+			@media screen and (max-width: 767px)
+				width: auto
+				margin: auto
+				text-align: center
+				order: 1
+			@media screen and (max-width: 575px)
+				padding: 40px 20px 40px
+			.item
+				span
+					font-family: Gotham pro
+					font-weight: 500
+					text-decoration: underline
+			.item:not(:last-child)
+				margin-bottom: 80px
+				@media screen and (max-width: 1199px)
+					margin-bottom: 50px
+				@media screen and (max-width: 991px)
+					margin-bottom: 30px
+	.schedule-column
+		width: 45%
+		@media screen and (max-width: 767px)
+			width: 100%
+			text-align: center
+			order: 1
+		.decor-img-block
+			img
+				min-height: 100%
+				width: 100%
+				float: left
+				@media screen and (max-width: 767px)
+					float: none
+					display: flex
+		.schedule-block
+			padding: 75px 80px
+			font-size: 22px
+			line-height: 1.6
+			@media screen and (max-width: 1199px)
+				padding: 50px 80px
+			@media screen and (max-width: 991px)
+				padding: 40px 40px
+				font-size: 18px
+			@media screen and (max-width: 767px)
+				width: max-content
+				margin: auto auto
+			.breakfast-time
+				span
+					display: block
+					font-size: 17px
+					margin-top: 36px
+					margin-bottom: 76px
+					@media screen and (max-width: 1199px)
+						margin-top: 20px
+						margin-bottom: 50px
+					@media screen and (max-width: 991px)
+						margin-bottom: 30px
+						margin-top: 20px
+						font-size: 15px
+
+@keyframes rocknroll
+	0% 
+		width: 100%
+	50%
+		width: 0
+	100%
+		width: 100%
+
+/*Contacts page*/
+.contacts
+	padding: 200px 0 80px
+	@media screen and (max-width: 991px)
+		padding-top: 160px
+	@media screen and (max-width: 767px)
+		padding-bottom: 40px
+	.emails
+		.email-list
+			.item
+				@media screen and (max-width: 767px)
+					text-align: center
+				.title
+					font-family: Gotham Pro
+					font-size: 25px
+					font-weight: 500
+					margin-bottom: 16px
+					@media screen and (max-width: 991px)
+						font-size: 18px
+					@media screen and (max-width: 767px)
+						font-size: 25px
+					@media screen and (max-width: 575px)
+						font-size: 20px
+				a
+					position: relative
+					font-size: 17px
+					padding: 5px 0 8px
+					@media screen and (max-width: 991px)
+						font-size: 16px
+					@media screen and (max-width: 767px)
+						font-size: 17px
+					@media screen and (max-width: 767px)
+						font-size: 16px
+				a:after
+					position: absolute
+					bottom: 0px
+					left: 0
+					content: ''
+					height: 1px
+					width: 100%
+					background-color: #FF5F00
+					z-index: 2
+				:hover
+					@media screen and (min-width: 992px)
+						color: #000
+				:hover:after
+					@media screen and (min-width: 992px)
+						animation: rocknroll .4s
+						background-color: #000 
+						transition: background-color .2s step-end
+			:not(:last-child)
+				margin-bottom: 75px
+			:last-child
+				@media screen and (max-width: 767px)
+					margin-bottom: 75px
+	.map-container
+		height: 510px
+		width: 100%
+		background-color: #707070
+		@media screen and (max-width: 575px)
+			height: 300px
+
+/*Job form*/
+.job
+	padding: 160px 0 80px
+	.title
+		width: 340px
+		margin: 0 auto 64px
+		font-size: 25px
+		font-weight: 500
+		line-height: 1.2
+		text-align: center
+		@media screen and (max-width: 575px)
+			width: auto
+			font-size: 18px
+	.job-form
+		width: 490px
+		margin: 0 auto
+		@media screen and (max-width: 575px)
+			width: 100%
+		label
+			margin-bottom: 10px
+			font-size: 17px
+		input, select
+			display: block
+			margin: 0 auto 70px
+			width: 100%
+			border: none
+			border-bottom: 1px solid black
+			padding: 12px 0
+			font-size: 15px
+			outline: none
+			@media screen and (max-width: 575px)
+				font-size: 14px
+		input::placeholder
+			color: #707070
+		.birth
+			align-items: center
+			height: 42px
+		.file-block
+			position: relative
+			overflow: hidden
+			margin-bottom: 50px
+			.file-choose
+				display: flex
+				height: 45px
+				margin-bottom: 15px
+			.file_label
+				height: 40px
+				margin-right: 25px
+			input[type="file"]
+				display: none
+			input
+				border-bottom: none
+			label
+				display: flex
+				align-items: center
+				top: 0
+				left: 40px
+				height: 100%
+				width: max-content
+				cursor: pointer
+				border-bottom: 1px solid black
+				margin-bottom: 20px
+				span
+					width: max-content
+					@media screen and (max-width: 575px)
+						font-size: 14px
+			.filename
+				margin-bottom: 0
+				bottom: -100%
+				background-color: #fff
+				padding-left: 40px
+				color: #000
+		.agreement
+			margin-bottom: 85px
+			display: flex
+			justify-content: flex-start
+			.agreement-checkbox
+				width: max-content
+				margin: 0 14px 0 0
+			span
+				display: flex
+				flex-wrap: wrap
+			a
+				margin: 0 5px
+				color: #FF5F00
+				display: contents
+				height: max-content
+			a:hover
+				color: #000
+		.submit-button
+			display: flex
+			align-items: center
+			padding: 12px 50px 8px
+			background-color: #ff5f00
+			color: #fff
+			font-family: Gilroy
+			font-size: 15px
+			text-transform: uppercase
+			border: none
+			@media screen and (max-width: 575px)
+				margin: 0 auto
+
+/*Job page*/
+.job__main-screen
+	min-height: 100vh
+	padding-top: 75px
+	@media screen and (max-width: 575px)
+		min-height: unset
+	.bg-block
+		padding-top: 78px
+		height: 700px
+		background-image: url(../img/job_bg.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		@media screen and (max-width: 991px)
+			background-position-x: center
+		@media screen and (max-width: 575px)
+			height: 100%
+			padding: 0
+			background-image: none
+		.about-team
+			padding: 48px 67px 60px
+			color: #fff
+			background-color: #FF5F00
+			@media screen and (max-width: 991px)
+				padding: 30px 45px
+			@media screen and (max-width: 767px)
+				padding: 30px
+			@media screen and (max-width: 575px)
+				text-align: center
+				padding: 40px
+			.title
+				font-size: 22px
+				font-weight: 500
+				line-height: 1.2
+				margin-bottom: 36px
+				@media screen and (max-width: 767px)
+					font-size: 18px
+				span
+					text-transform: uppercase
+			p
+				font-size: 17px
+				letter-spacing: .5px
+				line-height: 1.6
+				@media screen and (max-width: 767px)
+					font-size: 16px
+					line-height: 1.2
+
+.job-content
+	padding-top: 90px
+	padding-bottom: 70px
+	.vacancies
+		@media screen and (max-width: 767px)
+			text-align: center
+			margin-bottom: 60px
+		.title
+			font-size: 22px
+			font-weight: 500
+			text-transform: uppercase
+			margin-bottom: 35px
+		.vacancy-list
+			li
+				margin-bottom: 30px
+				a
+					position: relative
+					font-size: 22px
+					padding-bottom: 9px
+				a:after
+					position: absolute
+					content: ''
+					bottom: 0
+					left: 0
+					height: 1px
+					width: 0
+					background-color: #000
+					transition: all .3s
+				a:hover
+					color: #000
+				a:hover:after
+					width: 100%
+				a.active:after
+					width: 100%
+	.vacancy_content
+		.vacancy_desc
+			.title
+				font-size: 22px
+				font-weight: 500
+				text-transform: uppercase
+				margin-bottom: 35px
+				@media screen and (max-width: 767px)
+					text-align: center
+			.desc__item-list
+				.list-title
+					font-size: 22px
+					@media screen and (max-width: 767px)
+						text-align: center
+			.resp, .require, .conditions, .add
+				margin-bottom: 30px
+				.list-title
+					font-size: 22px
+					margin-bottom: 20px
+				.list
+					li
+						position: relative
+						padding-left: 24px
+						font-size: 17px
+						line-height: 1.6
+					li:before
+						position: absolute
+						top: 6px
+						left: 0
+						content: ''
+						background-color: #ff5f00
+						height: 7px
+						width: 7px
+			.add
+				margin-bottom: 80px
+				@media screen and (max-width: 991px)
+					margin-bottom: 20px
+		.vacancy_button-container
+			.submit-button
+				display: flex
+				align-items: center
+				padding: 12px 50px 8px
+				background-color: #ff5f00
+				color: #fff
+				font-family: Gilroy
+				font-size: 15px
+				text-transform: uppercase
+				border: none
+				cursor: pointer
+				@media screen and (max-width: 991px)
+					margin-bottom: 80px
+				@media screen and (max-width: 767px)
+					margin: auto auto 80px
+		.gratitude
+			font-size: 19px
+			@media screen and (max-width: 767px)
+				text-align: center
+
+/*Philosophy*/
+.about-us
+	.tiles
+		flex-wrap: wrap
+		.item
+			width: 50%
+			@media screen and (max-width: 767px)
+				width: 100%
+		.item_raw
+			color: #fff
+			background-color: #FF5F00
+			padding: 88px 70px 70px 140px
+			@media screen and (max-width: 1199px)
+				padding: 70px 60px 70px 90px
+			@media screen and (max-width: 991px)
+				padding: 60px
+			@media screen and (max-width: 575px)
+				padding: 50px 30px
+				text-align: center
+			.content
+				line-height: 1.8
+				p
+					font-size: 15px
+					margin-bottom: 20px
+					span
+						font-weight: 800
+						margin-bottom: 20px
+						span
+							display: block
+							font-family: Gilroy
+							font-size: 30px
+							font-weight: 800
+							line-height: 1.2
+							margin-bottom: 20px
+							@media screen and (max-width: 991px)
+								font-size: 24px
+								margin-bottom: 10px
+				div
+					p
+						font-size: 15px
+						font-weight: 800
+		.item_slogan
+			display: flex
+			align-items: center
+			justify-content: center
+			@media screen and (max-width: 767px)
+				padding: 80px
+			@media screen and (max-width: 575px)
+				padding: 80px 30px
+			.title
+				font-family: XPLOR
+				font-size: 32px
+				text-align: center
+				@media screen and (max-width: 1199px)
+					padding: 0 10px
+				@media screen and (max-width: 991px)
+					font-size: 28px
+				span
+					display: block
+					color: #FF5F00
+					font-size: 57px
+					@media screen and (max-width: 991px)
+						font-size: 42px
+		.item_priority
+			display: flex
+			align-items: center
+			.content
+				padding: 120px 150px 120px 144px
+				font-size: 15px
+				line-height: 1.9
+				@media screen and (max-width: 1199px)
+					padding: 100px 80px
+				@media screen and (max-width: 991px)
+					padding: 40px 50px
+				@media screen and (max-width: 767px)
+					padding: 0 80px 80px
+				@media screen and (max-width: 575px)
+					padding: 0 30px 80px
+					text-align: center
+		.item_img
+			overflow: hidden
+			display: flex
+			img
+				height: 100%
+				width: auto
+				min-width: 100%
+				object-fit: cover
+				object-position: center
+				float: left
+				width: 100%
+	.mission
+		padding: 64px 0
+		background-color: #000
+		color: #fff
+		font-size: 22px
+		.container
+			@media screen and (max-width: 1199px)
+				justify-content: center
+			@media screen and (max-width: 767px)
+				text-align: center
+			@media screen and (max-width: 575px)
+				font-size: 20px
+		h1
+			color: #FF5F00
+			font-family: Gilroy
+			font-size: 35px
+			font-weight: 800
+			margin-right: 30px
+			@media screen and (max-width: 767px)
+				margin: 0 0 20px
+			@media screen and (max-width: 575px)
+				font-size: 32px
+		.content
+			line-height: 1.6
+			width: 60%
+			@media screen and (max-width: 767px)
+				width: 100%
+
+.history
+	background-image: url(../img/cheb.png)
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: left top
+	padding: 175px 0 100px
+	background-color: #000
+	overflow: hidden
+	height: max-content
+	transition: all .3s
+	@media screen and (max-width: 991px)
+		background-size: 40%
+	@media screen and (max-width: 767px)
+		margin-top: 82px
+		padding-top: 50px
+		background-size: 33%
+	@media screen and (max-width: 575px)
+		background-image: none
+	.history-slider
+		width: 270px
+		margin: auto
+		.owl-stage-outer
+			overflow: visible
+		.owl-item
+			color: #fff
+			width: 100%
+			.title
+				position: relative
+				display: flex
+				align-items: flex-end
+				font-family: Gilroy
+				font-size: 35px
+				font-weight: 800
+				padding-bottom: 27.5px
+				min-height: 100px
+			.title:after
+				position: absolute
+				content: ''
+				bottom: -1px
+				left: 0
+				width: 100%
+				height: 1px
+				background-color: #fff
+				transition: all .7s
+			p
+				transform: scale(0)
+				overflow: hidden
+				padding-top: 36.5px
+				line-height: 1.8
+				font-size: 15px
+				transition: all .3s ease-in-out
+		.owl-item.active
+			.title:after
+				background-color: #FF5F00
+			p
+				transform: scale(1)
+
+/*Loyalty*/
+.loyalty_main
+	margin-top: 75px
+	padding: 60px 0 40px
+	background-image: url(../img/loyalty_bg.jpg)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: max-content
+	width: 100%
+	box-shadow: inset 0 -598px 300px -300px rgba(0, 0, 0, .85)
+	@media screen and (max-width: 767px)
+		box-shadow: inset 0 -1000px 300px -300px rgba(0, 0, 0, 0.5)
+	.title-block
+		font-weight: 500
+		margin-bottom: 328px
+		@media screen and (max-width: 991px)
+			margin-bottom: 200px
+		@media screen and (max-width: 767px)
+			margin-bottom: 150px
+		@media screen and (max-width: 575px)
+			margin-bottom: 50px
+			text-align: center
+		.title
+			color: #FF5F00
+			font-size: 34px
+			margin-bottom: 27px
+			@media screen and (max-width: 991px)
+				font-size: 28px
+			@media screen and (max-width: 767px)
+				font-size: 24px
+			@media screen and (max-width: 575px)
+				margin-bottom: 16px
+		.subtitle
+			text-transform: uppercase
+			font-size: 25px
+			margin-bottom: 54px
+			@media screen and (max-width: 991px)
+				margin-bottom: 0
+				font-size: 22px
+			span
+				text-transform: none
+				display: block
+				font-size: 22px
+				margin-bottom: 55px
+				@media screen and (max-width: 991px)
+					margin-bottom: 27px
+				@media screen and (max-width: 767px)
+					font-size: 20px
+	.cards-row
+		justify-content: space-between
+		@media screen and (max-width: 767px)
+			flex-wrap: wrap
+		.item
+			width: 245px
+			@media screen and (max-width: 991px)
+				width: 200px
+			@media screen and (max-width: 767px)
+				margin: 0 auto 20px
+				width: 220px
+			@media screen and (max-width: 575px)
+				margin-bottom: 50px
+			.title
+				color: #fff
+				font-size: 15px
+				font-weight: 500
+				margin-bottom: 21px
+				@media screen and (max-width: 991px)
+					min-height: 2em
+				@media screen and (max-width: 767px)
+					min-height: 1em
+					margin-bottom: 15px
+			.card-img
+				position: relative
+				height: 136px
+				width: 100%
+				border-radius: 9px
+				margin-bottom: 22px
+				@media screen and (max-width: 767px)
+					margin-bottom: 15px
+				.name
+					position: absolute
+					top: 20px
+					left: 38px
+					font-family: Gilroy
+					font-size: 29px
+					font-weight: 800
+					@media screen and (max-width: 991px)
+						left: 18px
+				.discount
+					position: absolute
+					bottom: 18px
+					right: 18px
+					font-family: Gilroy
+					font-size: 42px
+					font-weight: 800
+			.desc
+				color: #fff
+				font-size: 14px
+				line-height: 1.2
+		.item_white
+			.card-img
+				background-color: #fff
+				.name
+					color: #FF5F00
+				.discount
+					color: #000
+		.item_orange
+			.card-img
+				background-color: #FF5F00
+				.name
+					color: #fff
+				.discount
+					color: #000
+		.item_black
+			.card-img
+				background-color: #000
+				.name
+					color: #fff
+				.discount
+					color: #fff
+
+.discount-block
+	padding: 100px 0
+	@media screen and (max-width: 767px)
+		padding: 30px 0
+	.discount-slider
+		width: 100%
+		position: relative
+		@media screen and (max-width: 767px)
+			display: flex
+			align-items: center
+		@media screen and (max-width: 575px)
+			display: block
+		.owl-stage
+			@media screen and (max-width: 767px)
+				display: flex
+				align-items: center
+		.item
+			display: flex
+			align-items: center
+			padding: 20px 5px
+			@media screen and (max-width: 767px)
+				flex-direction: column
+			.title
+				width: 40%
+				font-size: 14px
+				text-align: center
+				@media screen and (max-width: 991px)
+					width: 50%
+				@media screen and (max-width: 767px)
+					margin-bottom: 35px
+					width: 90%
+				span
+					display: block
+					color: #FF5F00
+			.title.xplor
+				font-family: XPLOR
+				font-size: 80px
+				@media screen and (max-width: 991px)
+					font-size: 60px
+				@media screen and (max-width: 575px)
+					font-size: 40px
+			.title.soak
+				font-family: Soak
+				font-size: 181px
+				line-height: .5
+				@media screen and (max-width: 767px)
+					font-size: 140px
+				@media screen and (max-width: 575px)
+					font-size: 100px
+			.content
+				width: 50%
+				margin: auto
+				@media screen and (max-width: 991px)
+					width: 46%
+					margin-left: 0
+				@media screen and (max-width: 767px)
+					width: 100%
+					text-align: center
+				.name
+					display: inline-block
+					background-color: #FF5F00
+					color: #fff
+					font-size: 28px
+					font-weight: 800
+					text-transform: uppercase
+					padding: 6px 15px
+					width: auto
+					margin-bottom: 27px
+					@media screen and (max-width: 991px)
+						font-size: 22px
+					@media screen and (max-width: 767px)
+						margin: 0 auto 15px
+				.desc
+					font-size: 15px
+					line-height: 1.6
+					margin-bottom: 48px
+					padding-left: 15px
+					width: 50%
+					@media screen and (max-width: 991px)
+						width: 80%
+						margin-bottom: 20px
+					@media screen and (max-width: 767px)
+						width: 100%
+						margin-bottom: 10px
+				.cond
+					color: #707070
+					font-size: 14px
+					line-height: 1.6
+					padding-left: 15px
+		.owl-dots
+			position: absolute
+			right: -20px
+			top: 0
+			display: flex
+			justify-content: center
+			flex-direction: column
+			height: 100%
+			width: 30px
+			@media screen and (max-width: 767px)
+				position: relative
+				height: 50%
+				width: 25px
+			@media screen and (max-width: 575px)
+				flex-direction: row
+				position: static
+				width: 80%
+				margin: auto
+			.owl-dot
+				height: 11px
+				width: 11px
+				background-color: #000
+				border: 1px solid black
+				border-radius: 50%
+				margin: auto
+				@media screen and (max-width: 767px)
+					margin: 20px auto
+			.owl-dot.active
+				height: 21px
+				width: 21px
+				background-color: #fff
+				@media screen and (max-width: 767px)
+					height: 11px
+					width: 11px
+.app
+	padding-top: 100px
+	position: relative
+	overflow: hidden
+	@media screen and (max-width: 991px)
+		padding-top: 0
+	.content
+		background-color: #FEC94B
+		padding: 58px 0 74px
+		.title
+			color: #fff
+			font-family: Gilroy
+			font-size: 30px
+			font-weight: 800
+			margin-bottom: 15px
+			@media screen and (max-width: 575px)
+				text-align: center
+		.subtitle
+			font-size: 15px
+			line-height: 1.6
+			margin-bottom: 45px
+			@media screen and (max-width: 767px)
+				margin-bottom: 15px
+			@media screen and (max-width: 575px)
+				text-align: center
+		.algorithm
+			line-height: 1.2
+			.item
+				display: flex
+				margin-bottom: 24px
+				@media screen and (max-width: 767px)
+					margin-bottom: 15px
+				span
+					padding-right: 5px
+			.img-container
+				display: block
+				@media screen and (max-width: 575px)
+					text-align: center
+				a:not(:last-child)
+					margin-right: 22px
+				img
+					height: 43px
+					width: 153px
+					@media screen and (max-width: 991px)
+						width: 150px		
+				a:hover img
+					transform: scale(1.03)
+		.app-img
+			position: absolute
+			bottom: 0
+			right: 0
+			height: 100%
+			@media screen and (max-width: 1199px)
+				right: -160px
+			@media screen and (max-width: 991px)
+				right: -100px
+				height: 80%
+			@media screen and (max-width: 767px)
+				display: none
+.loyalty-conditions
+	padding: 98px 0 137px
+	.title
+		font-size: 34px
+		font-weight: 800
+		margin-bottom: 68px
+	.content
+		font-size: 15px
+		line-height: 1.6
+
+/*Модальное окно резерва*/
+.review-modal
+	.modal-content
+		position: relative
+		border-radius: 0
+		@media (max-width:575px)
+			text-align: center
+		.closebutton
+			.close
+				position: absolute
+				top: 13px
+				right: 13px
+				height: 23px
+				width: 23px
+				span
+					display: block
+					height: 2px
+					width: 32px
+					background-color: #fff
+					transform: rotate(45deg)
+					margin-left: -5px
+				span:after
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					height: 2px
+					width: 32px
+					background-color: #fff
+					transform: rotate(90deg)
+		.modal-header
+			border-radius: 0
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			background-color: #ff5f00
+			padding: 26px 0 24px
+			width: 100%
+			@media (max-width:991px)
+				justify-content: center
+			.title
+				color: #fff
+				font-size: 25px
+				text-transform: uppercase
+				padding-left: 30px
+				@media (max-width: 991px)
+					padding-left: 0
+		.modal-body
+			font-size: 15px
+			padding: 56px 0px 58px
+			line-height: 1.8
+			.title
+				margin-bottom: 85px
+				padding-left: 30px
+				@media screen and (max-width: 991px)
+					margin-bottom: 50px
+					padding-right: 30px
+			.row
+				position: relative
+			.form-container
+				position: unset
+				margin-bottom: 1px
+				.reserve-form
+					justify-content: space-between
+					flex-wrap: wrap
+					padding: 0 76px 0 15px
+					@media screen and (max-width: 1199px)
+						padding-right: 40px
+					@media (max-width:575px)
+						flex-direction: column
+						padding-right: 15px
+					label
+						font-family: Gotham Pro
+						font-size: 17px
+						font-weight: 500
+						margin-bottom: 48px
+						@media screen and (max-width: 575px)
+							width: 260px
+						input, select
+							height: 40px
+							margin-top: 15px
+						input[type="number"]
+							text-align: center
+						@media (max-width:575px)
+							margin-left: auto
+							margin-right: auto
+					input, textarea, select
+						width: 100%
+						font-size: 15px
+						display: block
+						border: none
+						border-bottom: 1px solid #000
+						outline: none
+					textarea
+						outline: none
+						margin-top: 24px
+						width: 100%
+						@media screen and (max-width: 575px)
+							width: 260px
+							margin: auto
+					.left-side
+						width: 30%
+						display: flex
+						flex-direction: column
+						@media screen and (max-width: 1199px)
+							width: 40%
+						@media screen and (max-width: 991px)
+							width: 100%
+					.right-side
+						width: 50%
+						@media screen and (max-width: 991px)
+							width: 100%
+						.label-review
+							width: 100%
+							margin-bottom: 60px
+							.review
+								overflow: hidden
+								max-height: 400px
+								margin-top: 15px
+								@media (max-width:575px)
+						.file-block
+							position: relative
+							overflow: hidden
+							margin-bottom: 50px
+							.file-choose
+								display: flex
+								height: 45px
+								margin-bottom: 15px
+								@media (max-width:575px)
+									margin: auto
+									justify-content: center
+									width: max-content
+								.file_label
+									height: 40px
+									margin-right: 25px
+								input[type="file"]
+									display: none
+								input
+									border-bottom: none
+								label
+									display: flex
+									align-items: center
+									top: 0
+									left: 40px
+									height: 100%
+									width: max-content
+									cursor: pointer
+									border-bottom: 1px solid black
+									margin-bottom: 20px
+									@media (max-width:575px)
+										margin-left: 0
+									span
+										width: max-content
+										@media screen and (max-width: 575px)
+											font-size: 14px
+								.filename
+									margin-bottom: 0
+									bottom: -100%
+									background-color: #fff
+									padding-left: 40px
+									color: #000
+							.filename
+								border: none
+								background-color: transparent
+					.send-button
+						position: absolute
+						bottom: 0
+						right: 30px
+						cursor: pointer
+						z-index: 1
+						padding: 4px 28px 0
+						background-color: #ff5f00
+						color: #fff
+						font-family: Gilroy
+						text-transform: uppercase
+						border: 1px solid #ff5f00
+						@media (max-width:575px)
+							margin-right: -74px
+							right: 50%
+					.send-button:hover
+						color: #ff5f00
+						background-color: #fff
+			.note
+				position: relative
+				padding-bottom: 50px
+				a
+					font-family: Gotham Pro
+					font-weight: 800
+				a:hover
+					color: #ff5f00
+			.note:before
+				position: absolute
+				top: 0
+				left: 0
+				content: ''
+				background-color: rgba(112,112,112,.35)
+				height: 100%
+				width: 1px
+				.item:not(:last-child)
+					margin-bottom: 36px
+			.add-info
+				padding: 56px 15px 64px
+				a
+					font-family: Gotham Pro
+					font-weight: 800
+				a:hover
+					color: #ff5f00
+			.reserve-info
+				position: relative
+				font-size: 15px
+				padding: 0 15px
+				.content
+					border-top: 1px solid rgba(112,112,112,.35)
+					padding: 42px 0 36px
+				.adresses-list
+					@media (max-width:991px)
+						justify-content: space-between
+					@media (max-width:575px)
+						flex-direction: column
+					.item
+						margin-right: 70px
+						@media (max-width:991px)
+							margin-right: 0
+						a
+							font-family: Gotham Pro
+							font-weight: 800
+							display: block
+						a:hover
+							color: #ff5f00
+					.item:not(:last-child)
+						@media (max-width:575px)
+							margin-bottom: 40px

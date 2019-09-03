@@ -1,0 +1,21 @@
+<svg id="small-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #040404;
+      }
+    </style>
+  </defs>
+  <g id="calendar_1_">
+    <path id="Path_159" data-name="Path 159" class="cls-1" d="M29.334,3H25V1a1,1,0,0,0-2,0V3H17V1a1,1,0,0,0-2,0V3H9V1A1,1,0,0,0,7,1V3H2.667A2.666,2.666,0,0,0,0,5.666V29.333A2.667,2.667,0,0,0,2.667,32H29.334A2.666,2.666,0,0,0,32,29.333V5.666A2.665,2.665,0,0,0,29.334,3ZM30,29.333a.667.667,0,0,1-.666.667H2.667A.667.667,0,0,1,2,29.333V5.666A.667.667,0,0,1,2.667,5H7V7A1,1,0,0,0,9,7V5h6V7a1,1,0,0,0,2,0V5h6V7a1,1,0,0,0,2,0V5h4.334A.667.667,0,0,1,30,5.666Z"/>
+    <rect id="Rectangle_88" data-name="Rectangle 88" class="cls-1" width="4" height="3" transform="translate(7 12)"/>
+    <rect id="Rectangle_89" data-name="Rectangle 89" class="cls-1" width="4" height="3" transform="translate(7 17)"/>
+    <rect id="Rectangle_90" data-name="Rectangle 90" class="cls-1" width="4" height="3" transform="translate(7 22)"/>
+    <rect id="Rectangle_91" data-name="Rectangle 91" class="cls-1" width="4" height="3" transform="translate(14 22)"/>
+    <rect id="Rectangle_92" data-name="Rectangle 92" class="cls-1" width="4" height="3" transform="translate(14 17)"/>
+    <rect id="Rectangle_93" data-name="Rectangle 93" class="cls-1" width="4" height="3" transform="translate(14 12)"/>
+    <rect id="Rectangle_94" data-name="Rectangle 94" class="cls-1" width="4" height="3" transform="translate(21 22)"/>
+    <rect id="Rectangle_95" data-name="Rectangle 95" class="cls-1" width="4" height="3" transform="translate(21 17)"/>
+    <rect id="Rectangle_96" data-name="Rectangle 96" class="cls-1" width="4" height="3" transform="translate(21 12)"/>
+  </g>
+</svg>
