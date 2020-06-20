@@ -152,6 +152,50 @@ input {
     max-width: 1000px;
   }
 }
+#loader-site {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999;
+}
+#loader-site img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+}
+#loader-site img.circle-logo-an-out {
+  animation: 10s linear 0s normal none infinite running circlelogorot;
+  -webkit-animation: 10s linear 0s normal none infinite running circlelogorot;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#loader-site.hide {
+  opacity: 0;
+  top: -100%;
+}
+
+@keyframes circlelogorot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes circlelogorot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .reserve-modal .modal-content {
   position: relative;
   border-radius: 0;
@@ -1451,7 +1495,10 @@ header .container .main-row.disabled {
 }
 .cafe__main-screen .main-img img {
   min-height: 100%;
-  width: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 @media screen and (max-width: 767px) {
   .cafe__main-screen .main-img img {
@@ -1851,11 +1898,18 @@ header .container .main-row.disabled {
   font-family: Gilroy;
   font-size: 15px;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid #ff5f00;
+  cursor: pointer;
 }
 @media screen and (max-width: 575px) {
   .job .job-form .submit-button {
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .job .job-form .submit-button:hover {
+    background-color: #fff;
+    color: #ff5f00;
   }
 }
 
@@ -2036,7 +2090,7 @@ header .container .main-row.disabled {
   font-family: Gilroy;
   font-size: 15px;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid #ff5f00;
   cursor: pointer;
 }
 @media screen and (max-width: 991px) {
@@ -2047,6 +2101,17 @@ header .container .main-row.disabled {
 @media screen and (max-width: 767px) {
   .job-content .vacancy_content .vacancy_button-container .submit-button {
     margin: auto auto 80px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .job-content .vacancy_content .vacancy_button-container .submit-button {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .job-content .vacancy_content .vacancy_button-container .submit-button:hover {
+    background-color: #fff;
+    color: #ff5f00;
   }
 }
 .job-content .vacancy_content .gratitude {

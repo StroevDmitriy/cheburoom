@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Cafe</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 	<link rel="stylesheet" href="css/vendor/owl.carousel.css">
 	<link rel="stylesheet" href="css/vendor/owl.theme.default.css">
@@ -11,6 +12,12 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<div id="loader-site">
+		<img src="img/circle-logo-an-out.svg" class="circle-logo-an-out">
+		<img src="img/circle-logo-an-in.svg" class="circle-logo-an-in">
+	</div>
+
 	<header class="header header_cafe">
 		<div class="container d-block d-md-none">
 			<div class="main-row">
@@ -90,13 +97,13 @@
 			</div>
 			<form id="job-form" class="job-form" action="" >
 				<label for="name">ФИО</label>
-				<input id="name" type="text" name="name" placeholder="Ваш ответ" >
+				<input id="name" type="text" name="name" placeholder="Введите ФИО" >
 				<label for="birth">Дата рождения</label>
 				<input id="birth" class="birth d-flex" type="text" name="birth" placeholder="дд.мм.гг" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
 				<label for="phone">Телефон</label>
-				<input id="phone" type="tel" name="phone" placeholder="Ваш ответ">
+				<input id="phone" type="tel" name="phone" placeholder="Введите телефон">
 				<label for="email">E-mail</label>
-				<input id="email" type="email" name="email" placeholder="E-mail">
+				<input id="email" type="email" name="email" placeholder="Введите e-mail">
 				<select name="subway" id="subway">
 					<option value="" disabled selected hidden required>Станция метро</option>
 					<option value="Станция 1">Станция 1</option>

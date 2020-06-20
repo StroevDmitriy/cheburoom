@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-// jQuery(window).load(function(){
 	//Слайдер фото
 	jQuery(".slider-list").owlCarousel({
 		loop:true,
@@ -89,8 +88,6 @@ jQuery('textarea').click(function(){
 		var el = this;
 		setTimeout(function(){
 			el.style.cssText = 'height:auto; padding:0';
-			// for box-sizing other than "content-box" use:
-			// el.style.cssText = '-moz-box-sizing:content-box';
 			el.style.cssText = 'height:' + el.scrollHeight + 'px';
 		},0);
 	}
@@ -118,17 +115,14 @@ function setWindowHeight() {
 	});
 }
 
-/*Проверка активного меню при загрузке страницы*/
+// Проверка активного меню при загрузке страницы
 function setActiveMenu() {
 	var width = jQuery(window).width();
-	if (jQuery("header")[0].classList.contains('header_index'))
-	{}
-	else
+
+	if (( !jQuery("header")[0].classList.contains('header_index') ) && ( width > 767 ))
 	{
-		if (width > 767) {
-			jQuery(".menu-row").addClass("active");
-			jQuery(".main-row").addClass("disabled");	
-		}
+		jQuery(".menu-row").addClass("active");
+		jQuery(".main-row").addClass("disabled");	
 	}
 }
 
@@ -142,7 +136,7 @@ function quantityProducts() {
 	$quantityArrowPlus.click(quantityPlus);
 	function quantityMinus() {
 		if ($quantityNum.val() > 1) {
-		  $quantityNum.val(+$quantityNum.val() - 1);
+			$quantityNum.val(+$quantityNum.val() - 1);
 		}
 	}
 	function quantityPlus() {
@@ -189,8 +183,7 @@ jQuery(document).ready( function() {
 	});
 });
 
-/* в самом конце 
-	убираем loader после загрузки страницы*/
+// Убираем loader после загрузки страницы
 jQuery(window).on('load',function(){
 	jQuery("#loader-site").addClass('hide');
 });

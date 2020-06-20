@@ -122,6 +122,47 @@ input
 	.modal-lg
 		max-width: 1000px
 
+#loader-site
+	background-color: #000
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	z-index: 99999999
+
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 200px
+		height: 200px
+		margin: (-100px) 0 0 -100px
+
+		&.circle-logo-an-out
+			animation: 10s linear 0s normal none infinite running circlelogorot
+			-webkit-animation: 10s linear 0s normal none infinite running circlelogorot
+			-webkit-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out
+
+	&.hide
+		opacity: 0
+		top: -100%
+
+@keyframes circlelogorot
+	0%
+		transform: rotate(0)
+
+	100%
+		transform: rotate(360deg)
+
+@-webkit-keyframes circlelogorot
+	0%
+		transform: rotate(0)
+
+	100%
+		transform: rotate(360deg)
+
 .reserve-modal
 	.modal-content
 		position: relative
@@ -1025,7 +1066,12 @@ header
 			width: 100%
 		img
 			min-height: 100%
-			width: auto
+			height: 100%
+			width: 100%
+
+			object-fit: cover
+			object-position: center
+
 			@media screen and (max-width: 767px)
 				width: 100%
 				display: flex
@@ -1290,9 +1336,14 @@ header
 			font-family: Gilroy
 			font-size: 15px
 			text-transform: uppercase
-			border: none
+			border: 1px solid #ff5f00
+			cursor: pointer
 			@media screen and (max-width: 575px)
 				margin: 0 auto
+			&:hover
+				@media screen and (min-width: 992px)
+					background-color: #fff
+					color: #ff5f00
 
 /*Job page*/
 .job__main-screen
@@ -1421,12 +1472,18 @@ header
 				font-family: Gilroy
 				font-size: 15px
 				text-transform: uppercase
-				border: none
+				border: 1px solid #ff5f00
 				cursor: pointer
 				@media screen and (max-width: 991px)
 					margin-bottom: 80px
 				@media screen and (max-width: 767px)
 					margin: auto auto 80px
+				@media screen and (max-width: 575px)
+					margin: 0 auto
+				&:hover
+					@media screen and (min-width: 992px)
+						background-color: #fff
+						color: #ff5f00
 		.gratitude
 			font-size: 19px
 			@media screen and (max-width: 767px)

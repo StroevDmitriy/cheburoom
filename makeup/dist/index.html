@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>ЧебуRoom</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 	<link rel="stylesheet" href="css/vendor/owl.carousel.css">
 	<link rel="stylesheet" href="css/vendor/owl.theme.default.css">
@@ -11,47 +12,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<style>
-		#loader-site{
-			background-color:#000;
-			position:fixed;
-			top:0;left:0;
-			height:100%;width:100%;
-			z-index:99999999
-		}
-		#loader-site img{
-			position:absolute;
-			top:50%;left:50%;
-			width:200px;height:200px;
-			margin:-100px 0 0 -100px
-		}
-		#loader-site img.circle-logo-an-out{
-			animation:10s linear 0s normal none infinite running circlelogorot;
-			-webkit-animation:10s linear 0s normal none infinite running circlelogorot;
-			-webkit-transition: all 0.2s ease-in-out;
-			transition: all 0.2s ease-in-out;
-		}
-		@keyframes circlelogorot{
-			0%{
-				transform:rotate(0)
-			}
-			100%{
-				transform:rotate(360deg)
-			}
-		}
-		@-webkit-keyframes circlelogorot{
-			0%{
-				transform:rotate(0)
-			}
-			100%{
-				transform:rotate(360deg)
-			}
-		}
-		#loader-site.hide{
-			opacity: 0;
-			top:-100%;
-		}
-	</style>
+	
 	<div id="loader-site">
 		<img src="img/circle-logo-an-out.svg" class="circle-logo-an-out">
 		<img src="img/circle-logo-an-in.svg" class="circle-logo-an-in">
